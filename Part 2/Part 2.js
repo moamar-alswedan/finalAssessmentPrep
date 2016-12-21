@@ -31,4 +31,49 @@
 		sortPalyerBy(arrayOfPlayers, "name");
  */
 
-//writ your code here .....
+function Player(name) {
+	var palyers={}
+	palyers.name=name;
+	palyers.addInfo=addInfo;
+	palyers.increaseLevel=increaseLevel
+
+	return palyers;
+}
+
+
+var addInfo=function(age,position, level, availability){
+  this.age=age;
+  this.position=position;
+  this.level=level;
+  this.availability=availability
+
+}
+
+
+var increaseLevel=function (n) {
+	this.level=this.level+n;
+}
+
+var player1=Player("player1")
+player1.addInfo(31,"defense",2,"availab");
+
+var player2=Player("player2")
+player1.addInfo(25,"attack",1,"notavailab");
+
+var player3=Player("player3")
+player1.addInfo(30,"defense",4,"availab");
+
+var player4=Player("player4")
+player1.addInfo(40,"attack",2,"availab");
+
+
+var arrayOfPlayers =[player1,player2,player3,player4]
+
+var decrease=function() {
+	for (var i = 0; i < arrayOfPlayers.length; i++) {
+		if(arrayOfPlayers[i].age>30){
+			arrayOfPlayers[i].level=arrayOfPlayers[i].level-1
+		}
+	}
+	return arrayOfPlayers
+}

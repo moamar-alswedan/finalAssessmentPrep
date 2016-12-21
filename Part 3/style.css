@@ -1,0 +1,14 @@
+body {
+	background-color: red;
+}
+h1 {
+	font-family:arial
+}
+
+
+.textinput{
+	width: 200px
+	height:100px;
+}
+
+$(document)
